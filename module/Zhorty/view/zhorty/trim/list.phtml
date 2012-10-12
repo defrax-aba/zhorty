@@ -1,0 +1,14 @@
+<table class="table">
+<tr>
+    <th>Original URI</th>
+    <th>Trimmed Path</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($trimlist as $entity) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($entity->getOrigUrl());?></td>
+    <td><?php echo $this->escapeHtml($entity->getTrimPath());?></td>
+    <td><a href="/trim/delete/<?php echo $entity->getId();?>">Delete</a></td>
+</tr>
+<?php endforeach; ?>
+</table>

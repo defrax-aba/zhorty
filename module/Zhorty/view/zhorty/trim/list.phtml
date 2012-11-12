@@ -8,7 +8,7 @@
 <tr>
     <td><?php echo $this->escapeHtml($entity->getOrigUrl());?></td>
     <td><?php echo $this->escapeHtml($entity->getTrimPath());?></td>
-    <td><a href="/trim/delete/<?php echo $entity->getId();?>">Delete</a></td>
+    <td><a href="<?=$this->url('zhorty-trim/zhorty-trim-delete', array('id' => $entity->getId()));?>">Delete</a></td>
 </tr>
 <?php endforeach; ?>
 </table>
